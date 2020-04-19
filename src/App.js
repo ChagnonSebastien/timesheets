@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Employee from './Employee';
 
-export default () => {
+const App = () => {
 
   const [employees] = useState([
     {employeeID: 0, firstName: "Michael", lastName: "Scott"},
@@ -21,3 +21,7 @@ export default () => {
     </div>
   )
 };
+
+App.propTypes = {}
+
+export default App;
