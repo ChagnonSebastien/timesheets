@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Employee = (props) => (
+const EmployeeLabel = (props) => (
   <div style={{display: 'flex'}}>
     <div style={{float: 'left', fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle'}}>
         {props.employeeID}&nbsp;-&nbsp;
@@ -12,10 +12,10 @@ const Employee = (props) => (
   </div>
 );
 
-Employee.propTypes = {
+EmployeeLabel.propTypes = {
   employeeID: PropTypes.number,
   firstName: PropTypes.string,
   lastName: PropTypes.string
 }
 
-export default Employee;
+export default EmployeeLabel;

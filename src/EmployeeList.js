@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useCallback } from 'react';
 import { Row, Col, Card, Form, ListGroup } from 'react-bootstrap';
 
-import Employee from './Employee';
+import EmployeeLabel from './EmployeeLabel';
 
 const EmployeeList = () => {
 
@@ -63,7 +63,7 @@ const EmployeeList = () => {
               })
               .map(employee => (
                 <ListGroup.Item as="li" key={employee.employeeID}>
-                  <Employee employeeID={employee.employeeID} firstName={employee.firstName} lastName={employee.lastName}/>
+                  <EmployeeLabel employeeID={employee.employeeID} firstName={employee.firstName} lastName={employee.lastName}/>
                 </ListGroup.Item>
               ))
             }
@@ -75,6 +75,6 @@ const EmployeeList = () => {
 
 };
 
-Employee.propTypes = {};
+EmployeeList.propTypes = {};
 
 export default EmployeeList;
