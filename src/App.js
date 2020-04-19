@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Employee from './Employee';
+
+import {Row, Col} from 'react-bootstrap';
 
 const App = () => {
 
@@ -10,15 +12,17 @@ const App = () => {
   ]);
 
   return (
-    <div class="row">
-      {
-        employees.map(employee => (
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <Employee id={employee.employeeID} firstName={employee.firstName} lastName={employee.lastName}/>
-          </div>
-        ))
-      }
-    </div>
+    <Fragment>
+      <Row>
+        {
+          employees.map(employee => (
+            <Col>
+              <Employee id={employee.employeeID} firstName={employee.firstName} lastName={employee.lastName}/>
+            </Col>
+          ))
+        }
+      </Row>
+    </Fragment>
   )
 };
 

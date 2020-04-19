@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Card} from 'react-bootstrap';
 
 const Employee = (props) => (
-    <div className="card">
-        <p>{props.employeeID} - {props.firstName} {props.lastName}</p>
-    </div>
+  <Card>
+      <Card.Body>
+        {props.employeeID} - {props.firstName} {props.lastName}
+      </Card.Body>
+  </Card>
 );
 
 Employee.propTypes = {
-    employeeID: PropTypes.number,
-    firstName: PropTypes.string,
-    lastName: PropTypes.string
+  employeeID: PropTypes.number,
+  firstName: PropTypes.string,
+  lastName: PropTypes.string
 }
 
 export default Employee;

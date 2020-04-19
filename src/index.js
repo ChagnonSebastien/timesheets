@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Container from 'react-bootstrap/Container'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="container">
+    <Container>
       <App />
-    </div>
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );
