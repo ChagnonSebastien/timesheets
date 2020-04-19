@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
-import EmployeeInfo from './EmployeeInfo';
-import EmployeeList from './EmployeeList';
+import {Navbar, Container, Nav} from 'react-bootstrap';
 
-import {Row, Col, Navbar, Container, Nav} from 'react-bootstrap';
+import EmployeeManagement from './EmployeeManagement';
 
 const App = ({title}) => (
   <Fragment>
@@ -17,14 +16,7 @@ const App = ({title}) => (
       </Navbar.Collapse>
     </Navbar>
     <Container>
-      <Row>
-        <Col xs={12} sm={12} md={5} lg={4} xl={3}>
-          <EmployeeList />
-        </Col>
-        <Col>
-          <EmployeeInfo />
-        </Col>
-      </Row>
+      <EmployeeManagement />
     </Container>
   </Fragment>
 );
